@@ -1,12 +1,14 @@
 import requests
+import pandas as pd 
+import numpy as np
 
-url = "https://ipinfo.io/190.60.194.114/json"
+class Spotify:
 
-try:
-    response = requests.get(url)
-    data= response.json()
-    print(data)
+    def __init__(self, csv_path):
+        self.csv = csv_path
 
-except:
-    print("Hubo un error")
-
+    def queries(self):
+        data= pd.read_csv(self.csv)
+    
+    def response():
+        return data.head(5)
