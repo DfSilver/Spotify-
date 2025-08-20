@@ -8,7 +8,7 @@ class Spotify:
         self.csv = csv_path
 
     def queries(self):
-        data= pd.read_csv(self.csv)
+        self.data= pd.read_csv(self.csv)
     
-    def response():
-        return data.head(5)
+    def response(self):
+        return self.data.head(5)
