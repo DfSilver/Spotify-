@@ -9,6 +9,10 @@ class LoaderSale:
         self.df = df
 
     def to_csv(self, output_path=None):
+
+        """
+        Guarda los datos transformados en un nuevo archivo CSV.
+        """
         output_path = output_path or ConfigSale.OUTPUT_PATH
         try:
             self.df.to_csv(output_path, index=False)
@@ -17,6 +21,10 @@ class LoaderSale:
             print(f"❌ Error al guardar CSV: {e}")
 
     def to_sqlite(self, db_path=None, table_name=None):
+
+        """
+        Guarda los datos transformados en una base de datos SQLite.
+        """
         db_path = db_path or ConfigSale.SQLITE_DB_PATH
         table_name = table_name or ConfigSale.SQLITE_TABLE
         try:

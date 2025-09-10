@@ -6,6 +6,12 @@ class TransformerSale:
         self.df = df
 
     def clean(self):
+
+        """
+        Aplica validaciones básicas:
+        - Eliminar duplicados
+        - Rellenar valores nulos
+        """
         import pandas as pd
         df = self.df.copy()
 

@@ -7,6 +7,9 @@ class ExtractorSale:
     def __init__(self, file_path):
         self.file_path = file_path
 
+    """
+    Lee el archivo CSV usando pandas y devuelve un DataFrame.
+    """
     def extract(self):
         try:
             df = pd.read_csv(self.file_path)
